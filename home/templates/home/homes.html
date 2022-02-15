@@ -1,0 +1,588 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% load wagtailcore_tags wagtailimages_tags%}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <!-- Site Title-->
+    <title>Blog</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7CLato:400,700">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-rtl.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+		<![endif]-->
+  </head>
+  <style>
+
+#mob-show > div {
+   display: none;
+}
+
+
+@media only screen and (max-width: 700px){ 
+   #web-show > div {
+     display: none;
+   }
+
+ #mob-show > div {
+     display: block;
+   }
+}
+
+#u-row { 
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+#u-row > div {
+	padding: 0 15px;
+}
+
+@media screen and (max-width: 700px) {
+	#u-row > div {
+		width: 100%;
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	#u-row {
+		
+	}
+}
+/* For small devices (e.g. smartphones) 
+img { max-width: 100%; display: inline-block; } /* For medium devices (e.g. tablets) */
+ /* @media (min-width: 420px) { img { max-width: 48%; } } /* For large devices (e.g. */
+ /* desktops)  */
+ /* @media (min-width: 760px) { img { max-width: 24%; } }  */
+
+
+@media only screen and (max-width: 700px) {
+  .mb-4 img {
+    height: 200px;
+    width:100%
+  }
+}
+
+
+#u-row ul {
+  list-style: none;
+  margin: 0 auto;
+}
+
+#u-row ul  li{
+  display: inline-block;
+  padding-right: 30px;
+  color: #000;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1.5px;
+}
+
+#l-row { 
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 60px;
+}
+
+#l-row ul {
+  list-style: none;
+  margin: 0 auto;
+}
+
+#l-row div {
+  display: inline-block;
+  padding-right: 10px;
+  color: #000;
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 3px;
+}
+  </style>
+  <body>
+    <!-- Page-->
+    <div class="text-center text-sm-left page">
+      <!-- Page preloader-->
+      <!-- <div class="page-loader">
+        <div><img src="{% static 'assets/MomsAndMidwives-02 2.png' %}" alt="" width="152" height="59"/>
+          <div class="page-loader-body">
+            <div class="cssload-square">
+              <div class="cssload-square-part cssload-square-green"></div>
+              <div class="cssload-square-part cssload-square-pink"></div>
+              <div class="cssload-square-blend"></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- Page Header-->
+      <header class="page-header rd-navbar-default rd-navbar-transparent">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="80px" data-lg-stick-up-offset="46px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
+            <div class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand-name" href="./"><img src="{% static 'assets/MomsAndMidwives-02 1.png' %}" alt="" width="152" height="59"/></a></div>
+              </div>
+              <div class="rd-navbar-aside-right">
+                <div class="rd-navbar-nav-wrap">
+                  <ul class="rd-navbar-nav">
+                    <li><a href="fitness.html">Home</a>
+                    </li>                  
+                    <li class="active"><a href="#">Blog</a>
+                      <!-- RD Navbar Dropdown-->
+                    
+                    </li>
+                   
+                  </ul>
+                </div>
+              
+                  <!--RD Navbar Search-->
+                    
+                  
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Breadcrumbs & Page title-->
+
+      <section class="section-md section-bottom-lg-200 bg-white">
+        <div class="shell shell-fluid-var-4">
+          <div class="range range-50 range-xs-90 range-lg-justify">
+            <div class="cell-lg-9 cell-xs-12 cell-lg-container">
+              <div class="range range-50 range-xs-90 range-center">
+                <div class="cell-xs-12">
+                  <div class="post-big">
+                    
+                    <div class="post-big-item">
+                        <img src="{% static 'assets/1.jpg' %}" alt="" width="100%" height="100px"/>
+                        <br />
+                        <br />
+                      <center>
+                        <h4>Lipstick Tricks You Probably Don’t Know About</h4>
+                      </center>
+                      <br />
+                      <div class="post-panel-top-between">
+                            <div class="group-sm"><span class="post-panel">
+                                <p>March 12, 2022</p></span><a class="post-panel" href="#"></div><span><span class="text-uppercase">2 minute read</span></span></a>
+                          </div>
+                      <p>You don’t have to be a makeup genius to know that lipstick can make a big impact—taking your face from drab to dramatic or simple to sexy—in seconds. But these brilliant expert tips will show you how to make it look better, last longer and work harder. We hope that this article will help you enhance your look and mark out your lips as it is an important element of woman’s image.</p>
+                      
+                      <p>First, it’s recommended that you gently exfoliate lips before applying color to make sure it goes on flawlessly, especially if you’re swiping on a dark or bold pigment that can accentuate every imperfection. “I love using a homemade scrub of sugar and honey to remove flakes and dryness,” says Dana Chasen Thomases, a makeup artist and owner of Beauty Muse Bridal.</p>
+                      <p>If you want the exact color you see in the tube, you need to start with a blank canvas and not the pink one that’s created by your natural lip color. To create a blank canvas, apply a thin coat of foundation all over your lips and blend over your lip line so it disappears into the rest of your skin. Or apply a smidgen of lip balm on the lips, blot and add a neutral powder to create an impromptu base that can last even longer than foundation, says makeup artist Hillary Clark. You can make any lipstick go the distance by following the following steps. After applying a coat of lipstick, blot it with a single-ply tissue. Then use a large eye shadow brush to dust the lips with a small amount of translucent powder. Follow with another layer of lipstick. Finally blot and powder twice before applying a final swipe of lipstick.</p>
+                      <br />
+                      <div>
+                        <h4>Deep dark red can make thin lips look even skinnier</h4>
+                      </div>
+                      
+                      <p>These are only some makeup tips that we are ready to share with you in this post. Our bloggers and fashion journalists are now working on new articles, which we hope will broaden your knowledge about modern makeup. Next article will include recommendations from widely known makeup artists on using liner and shadow, picking your everyday pink lipstick, and other interesting beauty hacks you need to know.</p>
+                    </div>
+                    <!-- <div class="range range-30">
+                      <div class="cell-sm-6"><img src="{% static 'assets/home1-5-347x241.jpg' %}" alt="" width="490" height="346"/>
+                      </div>
+                      <div class="cell-sm-6"><img src="{% static 'assets/1.jpg' %}" alt="" width="490" height="346"/>
+                      </div>
+                    </div> -->
+                    <div class="post-panel-bottom-between">
+                        <h1 style="color:rgba(218, 2, 135, 0.603);  padding-left:50px; display: inline-block; font-size:25px" >
+                                        
+                            <div class="group-sm">     
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                          </svg>
+                       
+                          </div>
+
+                          <strong>Prev:</strong>  tatibus possimus sgt  </h1>
+                      <div class="group-sm">
+
+                          </span> <h1 style="color:rgba(218, 2, 135, 0.603); padding-left:70px; display: inline-block; font-size:25px" >
+
+                            <strong>Next:</strong>  tatibus possimus sgt    
+                              
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                              </svg></h1>
+                           
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell-xs-12 text-center">
+                  <p class="title-decor-bottom">Related posts</p>
+                  <div class="range range-30 range-center">
+                    <div class="cell-md-4 cell-sm-12 cell-xs-10">
+                      <div class="post post-var-1 post-custom-1">
+                        <div class="unit unit-spacing-0 unit-sm-horizontal unit-md-vertical">
+                          <div class="unit__left"><a href="single-post.html"><img src="{% static 'assets/1.jpg' %}" alt="" width="347" height="241"/></a></div>
+                          <div class="unit__body">
+                            <div class="post-content">
+                              <div class="post-content-wrap">
+                                <div class="post-tags-wrap"><a class="post-tags" href="#" style=" 
+                                    color: rgb(201, 4, 63);font-size: 12px;
+                                    border: none;border-radius:30px 30px 30px 30px;margin-left:4px; 
+                                    position: relative; border: 1px solid rgb(201, 4, 63); 
+                                   
+                                    background: none;">Beauty</a>
+                                </div>
+                                <h5><a href="single-post.html">8 Makeup Tips Every Woman Should Know</a></h5>
+                                <p>Some makeup techniques may seem easy to follow, but they show great results...</p>
+                                <div class="post-panel-between"><span class="post-panel">
+                                    <time datetime="2017-01-03">january 3, 2017</time></span><span class="post-panel"><span>3 minute read</span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell-md-4 cell-sm-12 cell-xs-10">
+                      <div class="post post-var-1 post-custom-1">
+                        <div class="unit unit-spacing-0 unit-sm-horizontal unit-md-vertical">
+                          <div class="unit__left"><a href="single-post.html"><img src="images/beauty-2-347x241.jpg" alt="" width="347" height="241"/></a></div>
+                          <div class="unit__body">
+                            <div class="post-content">
+                              <div class="post-content-wrap">
+                                <div class="post-tags-wrap"><a class="post-tags" href="#">Beauty</a><span>,</span> <a class="post-tags" href="#">Hair</a>
+                                </div>
+                                <h5><a href="single-post.html">Choosing Hair Color: The Ultimate Guide</a></h5>
+                                <p>Your most beautiful hair color will bring out the subtleties of your skin tone and...</p>
+                                <div class="post-panel-between"><span class="post-panel"><span class="mdi mdi-sm mdi-clock"></span>
+                                    <time datetime="2017-01-15">january 15, 2017</time></span><span class="post-panel"><span class="fl-justicons-visible6"></span><span>524</span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell-md-4 cell-sm-12 cell-xs-10">
+                      <div class="post post-var-1 post-custom-1">
+                        <div class="unit unit-spacing-0 unit-sm-horizontal unit-md-vertical">
+                          <div class="unit__left"><a href="single-post.html"><img src="images/beauty-3-347x241.jpg" alt="" width="347" height="241"/></a></div>
+                          <div class="unit__body">
+                            <div class="post-content">
+                              <div class="post-content-wrap">
+                                <div class="post-tags-wrap"><a class="post-tags" href="#">Beauty</a><span>,</span> <a class="post-tags" href="#">Fashion</a>
+                                </div>
+                                <h5><a href="single-post.html">Expert Tips for Natural Makeup</a></h5>
+                                <p>Whether you're easing yourself into makeup or would simply like to try...</p>
+                                <div class="post-panel-between"><span class="post-panel"><span class="mdi mdi-sm mdi-clock"></span>
+                                    <time datetime="2017-01-20">January 20, 2017</time></span><span class="post-panel"><span class="fl-justicons-visible6"></span><span>524</span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+            <div class="cell-lg-3 cell-xs-12">
+              <div class="range range-50 range-center post-sidebar">
+               
+                <div class="cell-lg-12 cell-sm-6 text-left">
+                  <p class="sidebar-category">Other articles in this Categories</p>
+                  <div class="sidebar-border">
+                    <div class="post-sidebar-item post-sidebar-fullWidth">
+                      <div class="unit unit-spacing-sm unit-xs-middle unit-horizontal unit-lg-vertical unit-xlg-horizontal">
+                        <div class="unit__body">
+                        <ul>
+                                <li>
+                                    <h6><a href="single-post.html">Getting a Good Night’s Sleep: an Ultimate Guide for Everyone</a></h6>
+
+                                </li>
+                            </ul>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="post-sidebar-item post-sidebar-fullWidth">
+                      <div class="unit unit-spacing-sm unit-xs-middle unit-horizontal unit-lg-vertical unit-xlg-horizontal">
+                        <div class="unit__left"><a href="single-post.html"><img src="images/post-sidebar-2-90x98.jpg" alt="" width="90" height="98"/></a></div>
+                        <div class="unit__body">
+                          <h6><a href="single-post.html">Why Purple Cabbage is Useful for Your Health</a></h6>
+                          <div class="group-sm-sidebar">
+                            <p class="post-panel"><span class="mdi mdi-sm mdi-clock"></span>
+                              <time class="spacing-50" datetime="2017-06-05">June 5, 2017</time>
+                            </p>
+                            <p class="post-panel"><span class="fl-justicons-visible6"></span><span>1356</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="post-sidebar-item post-sidebar-fullWidth">
+                      <div class="unit unit-spacing-sm unit-xs-middle unit-horizontal unit-lg-vertical unit-xlg-horizontal">
+                        <div class="unit__left"><a href="single-post.html"><img src="images/post-sidebar-3-90x98.jpg" alt="" width="90" height="98"/></a></div>
+                        <div class="unit__body">
+                          <h6><a href="single-post.html">Preparing Your Skin for the Upcoming Summer</a></h6>
+                          <div class="group-sm-sidebar">
+                            <p class="post-panel"><span class="mdi mdi-sm mdi-clock"></span>
+                              <time class="spacing-50" datetime="2017-05-08">May 8, 2017</time>
+                            </p>
+                            <p class="post-panel"><span class="fl-justicons-visible6"></span><span>6424</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+               <div id="web-show">
+                <div class="cell-lg-12 cell-sm-6 text-center" 
+                style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), 
+                url(static/assets/side.png); background-repeat: no-repeat; 
+                background-size:100%;background-position: center center;">
+
+                        <center>
+                        <img src="{% static 'assets/MomsAndMidwives-02 2.png' %}" height="12"></a>
+
+                        </center>   
+                        <br />
+                        <br />
+                        <br />
+                         <br />
+                        
+                        <br />
+                        <div style="text-align:center; color:white">
+                            <strong><h1>Join The</strong><h1></h1>
+                            <strong><h1>Squad</strong><h1></h1>
+                        </div>     
+                        <br />
+                        <br />
+                        <br />
+
+                        <center>
+                        <img src="{% static 'assets/Android.png' %}" height="50" width="14"></a>
+
+                        </center>   
+                        <br />   
+                        <br />
+                       
+                                            
+                        <center>
+                        <img src="{% static 'assets/App_Store_logo.png' %}" height="50" width="14"></a>
+
+                        </center>
+                        
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        
+                        <br />
+                        
+                    <!-- </div> -->
+                    
+
+                
+        
+                    <!-- <img src="{% static 'assets/side.png' %}" alt="" width="381" height="238"/> -->
+              
+                  </div>
+                
+               </div>               
+            
+            
+               <div id="mob-show">
+                <div class="cell-lg-12 cell-sm-6 text-center" 
+                style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), 
+                url(static/assets/side2.png); background-repeat: no-repeat; 
+                background-size:100%;background-position: center center;">
+
+                        <center>
+                        <img src="{% static 'assets/MomsAndMidwives-02 2.png' %}" height="12px" width="10px"></a>
+
+                        </center>   
+                        <br />
+                        <br />
+                        <br />
+                         <br />
+                        
+                        <br />
+                        <div style="text-align:center; color:white">
+                            <strong><h1>Join The</strong><h1></h1>
+                            <strong><h1>Squad</strong><h1></h1>
+                        </div>     
+                        <br />
+                        <br />
+                        <br />
+
+                        <center>
+                        <img src="{% static 'assets/Android.png' %}" height="50" width="14"></a>
+
+                        </center>   
+                        <br />   
+                        <br />
+                       
+                                            
+                        <center>
+                        <img src="{% static 'assets/App_Store_logo.png' %}" height="50" width="14"></a>
+
+                        </center>
+                        
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        
+                        <br />
+                        
+                    <!-- </div> -->
+                    
+
+                
+        
+                    <!-- <img src="{% static 'assets/side.png' %}" alt="" width="381" height="238"/> -->
+              
+                  </div>
+                
+               </div>
+
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Page Footer-->
+      <footer class="py-5" style="background-color: deeppink; margin-top: 50px;">
+
+            <div id="u-row" style="padding-top: 30px;">
+                <div>                            
+                    <img src="{% static 'assets/MomsAndMidwives-02 2.png' %}" style="margin-top: 0;" height=""  width=""></a>
+                </div>
+                
+                <div>
+                      <ul>
+                        <li><img src="{% static 'assets/Android.pn' %}" height="" width=""></li>
+                        <li><img src="{% static 'assets/App_Store_logo.pn' %}" height="" width=""></li>
+                          
+                    </ul>
+                </div>
+                <div>
+                    <div id="u-row" style="padding: 2px;">
+                        <ul>
+                            <li>
+                                <p style="color:white; font-size: large;">Contact</p>
+                                    <p  style="margin-top: -10px; color:white"><strong>help@momsandmidwives.com</strong></p>
+                                
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="l-row">
+                <h3 style="color:white"><strong>WE'RE SOCIAL</strong></h3>
+            </div>
+            
+            <div id="u-row"  style="margin-top: -60px;">
+                 <ul>
+                        <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" color=white height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                          </svg>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" color="white" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                              </svg>
+                        </li>
+                        <li>    
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" color=white fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>                        
+                        </li>
+                          
+                    </ul>
+            
+            </div>
+            
+            <div id="u-row" style="margin-top: 60px;">
+                <ul>
+                    <li>
+                        <h6 style="color:white; padding-left: 10px;"><strong>Home</strong></h6>
+                    </li>
+                    <li>
+                        <h6 style="color:white">Midwife</h6>
+                       </li>
+        
+                </ul>
+            </div>
+                   
+            <!-- <div class="cell-sm-4 text-sm-right"><a href="mailto:#">info@demolink.org</a></div>
+          </div> -->
+
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- PhotoSwipe Gallery-->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__cent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Javascript-->
+    <script src="{% static 'js/core.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
+
+{% endblock %}
+

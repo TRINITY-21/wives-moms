@@ -1,0 +1,104 @@
+/**
+ * Title: Arrows Flaticon Pack
+ * Author: Icons8
+ * Source: http://www.flaticon.com/packs/arrows
+ * License:  CC BY 3.0 (http://creativecommons.org/licenses/by/3.0/)
+ */
+@font-face {
+  font-family: "arrows";
+  src: url("../fonts/arrows.eot");
+  src: url("../fonts/arrows.eot#iefix") format("embedded-opentype"), url("../fonts/arrows.woff") format("woff"), url("../fonts/arrows.ttf") format("truetype"), url("../fonts/arrows.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.arrows-ico,
+[class^="arrows-"]:before, [class*=" arrows-"]:before,
+[class^="arrows-"]:after, [class*=" arrows-"]:after {
+  font-family: "arrows";
+  font-size: inherit;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arrows-collapse3:before {
+  content: "\e000";
+}
+
+.arrows-down44:before {
+  content: "\e001";
+}
+
+.arrows-down45:before {
+  content: "\e002";
+}
+
+.arrows-expand22:before {
+  content: "\e003";
+}
+
+.arrows-left126:before {
+  content: "\e004";
+}
+
+.arrows-left127:before {
+  content: "\e005";
+}
+
+.arrows-left128:before {
+  content: "\e006";
+}
+
+.arrows-left129:before {
+  content: "\e007";
+}
+
+.arrows-next15:before {
+  content: "\e008";
+}
+
+.arrows-previous11:before {
+  content: "\e009";
+}
+
+.arrows-right103:before {
+  content: "\e00a";
+}
+
+.arrows-right104:before {
+  content: "\e00b";
+}
+
+.arrows-right105:before {
+  content: "\e00c";
+}
+
+.arrows-right106:before {
+  content: "\e00d";
+}
+
+.arrows-right107:before {
+  content: "\e00e";
+}
+
+.arrows-thin35:before {
+  content: "\e00f";
+}
+
+.arrows-thin36:before {
+  content: "\e010";
+}
+
+.arrows-up76:before {
+  content: "\e011";
+}
+
+.arrows-up77:before {
+  content: "\e012";
+}
+
+.arrows-up78:before {
+  content: "\e013";
+}
+
+/*# sourceMappingURL=arrows.css.map */
